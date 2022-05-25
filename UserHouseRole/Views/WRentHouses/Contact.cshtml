@@ -1,0 +1,96 @@
+﻿
+<div class=" banner-buying">
+    <div class=" container">
+        <h3><span>Обратная с</span>вязь</h3>
+        <!---->
+        <div class="menu-right">
+            <ul class="menu">
+                <li class="item1">
+                    <a href="#"> Меню<i class="glyphicon glyphicon-menu-down"> </i> </a>
+                    <ul class="cute">
+                        <li class="subitem1"><a asp-controller="SaleHouses" asp-action="Index">Продажа </a></li>
+                        <li class="subitem2"><a asp-controller="RentHouses" asp-action="Index">Аренда </a></li>
+                        <li class="subitem2"><a asp-controller="CreditHouses" asp-action="Index">Жилищный кредит</a></li>
+                        <li class="subitem3"><a asp-controller="SaleHouses" asp-action="Index">Квартиры </a></li>
+                        <li class="subitem3"><a href="dealers.html">Агентство</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="clearfix"> </div>
+        <!--initiate accordion-->
+        <script type="text/javascript">
+			$(function() {
+			    var menu_ul = $('.menu > li > ul'),
+			           menu_a  = $('.menu > li > a');
+			    menu_ul.hide();
+			    menu_a.click(function(e) {
+			        e.preventDefault();
+			        if(!$(this).hasClass('active')) {
+			            menu_a.removeClass('active');
+			            menu_ul.filter(':visible').slideUp('normal');
+			            $(this).addClass('active').next().stop(true,true).slideDown('normal');
+			        } else {
+			            $(this).removeClass('active');
+			            $(this).next().stop(true,true).slideUp('normal');
+			        }
+			    });
+
+			});
+        </script>
+
+    </div>
+</div>
+<!--//header-->
+<!--contact-->
+<div class="contact">
+    <div class="container">
+        <h3>Обратная связь</h3>
+        <div class="contact-top">
+            <div class="col-md-6 contact-top1">
+                <h4> Информация</h4>
+                <p class="text-contact">Вы можете оставить отзывы приложение. И  еще можете подать заявку на кредит</p>
+                <div class="contact-address">
+                    <div class="col-md-6 contact-address1">
+                        <h5>Адрес</h5>
+                        <p><b>Алматы</b></p>
+                        <p>Сатпаева дом 30 а</p>
+                        
+                    </div>
+                    <div class="col-md-6 contact-address1">
+                        <h5>Почта</h5>
+                        <p>Отделение :<a href="malito:mail@demolink.org">orinal.hep@mail.ru</a></p>
+                        <p>Офис :<a href="malito:mail@demolink.org"> getkz@gmail.com</a></p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="contact-address">
+                    <div class="col-md-6 contact-address1">
+                        <h5>Phone </h5>
+                        <p>Call центр : 254-8974-5847</p>
+                        <p>Мобильный : +174 1478 74755</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="col-md-6 contact-right">
+
+                <form>
+                    <input type="text" placeholder="Имя" required="">
+                    <input type="text" placeholder="Почта" required="">
+                    <input type="text" placeholder="Текст" required="">
+                    <textarea placeholder="Message" requried=""></textarea>
+                    <label class="hvr-sweep-to-right">
+                        <input type="submit" value="Отправить">
+                    </label>
+                </form>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2906.7106791264086!2d76.91999051535208!3d43.236525279137865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836ed3b734e44b%3A0xf011c6f0c790d38!2z0YPQu9C40YbQsCDQodCw0YLQv9Cw0LXQstCwIDMwLCDQkNC70LzQsNGC0YsgMDUwMDAw!5e0!3m2!1sru!2skz!4v1651082594489!5m2!1sru!2skz"></iframe>
+
+    </div>
+</div>
+<!--//contact-->

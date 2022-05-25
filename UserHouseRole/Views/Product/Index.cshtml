@@ -1,0 +1,41 @@
+﻿@using UserHouseRole.Constants             
+@using Microsoft.AspNetCore.Authorization                   
+@inject IAuthorizationService AuthorizationService
+<h1>Подать объявление</h1>                        
+<br />
+<form method="post" class="form-horizontal">
+    @if ((AuthorizationService.AuthorizeAsync(User, Permissions.Products.Create)).Result.Succeeded)
+    {
+    <input class="btn btn-success" type="submit" asp-controller="Product" asp-action="Complete" value="Create " />
+    }
+    @if ((AuthorizationService.AuthorizeAsync(User, Permissions.Products.View)).Result.Succeeded)
+    {
+        <button class="btn btn-info">View</button>}
+    @if ((AuthorizationService.AuthorizeAsync(User, Permissions.Products.Edit)).Result.Succeeded)
+    {
+        <button class="btn btn-warning">Modify</button>}
+    @if ((AuthorizationService.AuthorizeAsync(User, Permissions.Products.Delete)).Result.Succeeded)
+    {
+        <button class="btn btn-danger">Delete</button>}
+</form>
+    <script>
+        $('#btnSearch').on('click',
+            function (e) {
+                $.ajax({
+                    url: '/Product/Complete',
+                    type: 'POST',
+                    cache: false,
+                    async: true,
+                    dataType: "html"
+
+
+                })
+                    .done(function (result) {
+                        $('#students').html(result);
+                    }).fail(function (xhr) {
+                        console.log('error : ' + xhr.status + ' - ' + xhr.statusText + ' - ' + xhr.responseText);
+                    });
+
+            });
+
+    </script>

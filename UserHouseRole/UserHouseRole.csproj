@@ -1,0 +1,150 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>aspnet-UserHouseRole-11DF9415-9E0C-469D-8E5D-A93B958DECCC</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="3.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="5.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="5.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="5.0.13" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.13" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.15">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+    <PackageReference Include="MimeKit" Version="3.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\bootstrap.css" />
+    <None Include="wwwroot\css\default.css" />
+    <None Include="wwwroot\css\flexslider.css" />
+    <None Include="wwwroot\css\popuo-box.css" />
+    <None Include="wwwroot\css\style.css" />
+    <None Include="wwwroot\css\styles.css" />
+    <None Include="wwwroot\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="wwwroot\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="wwwroot\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="wwwroot\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="wwwroot\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="wwwroot\fonts\Montserrat-Regular.ttf" />
+    <None Include="wwwroot\fonts\Oxygen-Regular.ttf" />
+    <None Include="wwwroot\images\11.png" />
+    <None Include="wwwroot\images\2.jpg" />
+    <None Include="wwwroot\images\4.jpg" />
+    <None Include="wwwroot\images\5.jpg" />
+    <None Include="wwwroot\images\ab.jpg" />
+    <None Include="wwwroot\images\ar.png" />
+    <None Include="wwwroot\images\arr.png" />
+    <None Include="wwwroot\images\arrow.png" />
+    <None Include="wwwroot\images\at.jpg" />
+    <None Include="wwwroot\images\at1.jpg" />
+    <None Include="wwwroot\images\av.png" />
+    <None Include="wwwroot\images\ba.png" />
+    <None Include="wwwroot\images\ba1.png" />
+    <None Include="wwwroot\images\ba2.png" />
+    <None Include="wwwroot\images\ba3.png" />
+    <None Include="wwwroot\images\ba4.png" />
+    <None Include="wwwroot\images\back1.jpg" />
+    <None Include="wwwroot\images\bl.jpg" />
+    <None Include="wwwroot\images\bl1.jpg" />
+    <None Include="wwwroot\images\bl2.jpg" />
+    <None Include="wwwroot\images\bo.jpg" />
+    <None Include="wwwroot\images\bo1.jpg" />
+    <None Include="wwwroot\images\bo2.jpg" />
+    <None Include="wwwroot\images\bo3.jpg" />
+    <None Include="wwwroot\images\bo4.jpg" />
+    <None Include="wwwroot\images\ce.jpg" />
+    <None Include="wwwroot\images\ce1.jpg" />
+    <None Include="wwwroot\images\ce2.jpg" />
+    <None Include="wwwroot\images\ce3.jpg" />
+    <None Include="wwwroot\images\ce4.jpg" />
+    <None Include="wwwroot\images\ce5.jpg" />
+    <None Include="wwwroot\images\ci.jpg" />
+    <None Include="wwwroot\images\ci1.jpg" />
+    <None Include="wwwroot\images\ci2.jpg" />
+    <None Include="wwwroot\images\ci3.jpg" />
+    <None Include="wwwroot\images\ci4.jpg" />
+    <None Include="wwwroot\images\ci5.jpg" />
+    <None Include="wwwroot\images\ci6.jpg" />
+    <None Include="wwwroot\images\ci7.jpg" />
+    <None Include="wwwroot\images\co.png" />
+    <None Include="wwwroot\images\de.jpg" />
+    <None Include="wwwroot\images\de1.jpg" />
+    <None Include="wwwroot\images\de10.jpg" />
+    <None Include="wwwroot\images\de11.jpg" />
+    <None Include="wwwroot\images\de2.jpg" />
+    <None Include="wwwroot\images\de3.jpg" />
+    <None Include="wwwroot\images\de4.jpg" />
+    <None Include="wwwroot\images\de5.jpg" />
+    <None Include="wwwroot\images\de6.jpg" />
+    <None Include="wwwroot\images\de7.jpg" />
+    <None Include="wwwroot\images\de8.jpg" />
+    <None Include="wwwroot\images\de9.jpg" />
+    <None Include="wwwroot\images\ga.jpg" />
+    <None Include="wwwroot\images\ga1.jpg" />
+    <None Include="wwwroot\images\ga2.jpg" />
+    <None Include="wwwroot\images\ga3.jpg" />
+    <None Include="wwwroot\images\ho1.jpg" />
+    <None Include="wwwroot\images\img-sprite.png" />
+    <None Include="wwwroot\images\lg.png" />
+    <None Include="wwwroot\images\lg1.png" />
+    <None Include="wwwroot\images\lg2.png" />
+    <None Include="wwwroot\images\lg3.png" />
+    <None Include="wwwroot\images\lg4.png" />
+    <None Include="wwwroot\images\lg5.png" />
+    <None Include="wwwroot\images\lg6.png" />
+    <None Include="wwwroot\images\lg7.png" />
+    <None Include="wwwroot\images\lg8.png" />
+    <None Include="wwwroot\images\lg9.png" />
+    <None Include="wwwroot\images\lo.png" />
+    <None Include="wwwroot\images\lo1.png" />
+    <None Include="wwwroot\images\lo2.png" />
+    <None Include="wwwroot\images\pc1.jpg" />
+    <None Include="wwwroot\images\pc2.jpg" />
+    <None Include="wwwroot\images\pc3.jpg" />
+    <None Include="wwwroot\images\pc4.jpg" />
+    <None Include="wwwroot\images\pc5.jpg" />
+    <None Include="wwwroot\images\ph1.png" />
+    <None Include="wwwroot\images\pi.jpg" />
+    <None Include="wwwroot\images\pi1.jpg" />
+    <None Include="wwwroot\images\pi2.jpg" />
+    <None Include="wwwroot\images\pi3.jpg" />
+    <None Include="wwwroot\images\pr.jpg" />
+    <None Include="wwwroot\images\sb.jpg" />
+    <None Include="wwwroot\images\sb1.jpg" />
+    <None Include="wwwroot\images\sb2.jpg" />
+    <None Include="wwwroot\images\sb3.jpg" />
+    <None Include="wwwroot\images\sb4.jpg" />
+    <None Include="wwwroot\images\sb5.jpg" />
+    <None Include="wwwroot\images\sb6.jpg" />
+    <None Include="wwwroot\images\search.png" />
+    <None Include="wwwroot\images\sl.jpg" />
+    <None Include="wwwroot\images\sl1.jpg" />
+    <None Include="wwwroot\images\sl2.jpg" />
+    <None Include="wwwroot\images\sl3.jpg" />
+    <None Include="wwwroot\images\sl4.jpg" />
+    <None Include="wwwroot\images\ss.jpg" />
+    <None Include="wwwroot\images\ss1.jpg" />
+    <None Include="wwwroot\images\ss2.jpg" />
+    <None Include="wwwroot\images\ss3.jpg" />
+    <None Include="wwwroot\images\star1.png" />
+    <None Include="wwwroot\images\te.jpg" />
+    <None Include="wwwroot\images\te1.jpg" />
+    <None Include="wwwroot\images\te2.jpg" />
+    <None Include="wwwroot\js\easyResponsiveTabs.js" />
+    <None Include="wwwroot\js\jquery.flexisel.js" />
+    <None Include="wwwroot\js\jquery.flexslider.js" />
+    <None Include="wwwroot\js\jquery.magnific-popup.js" />
+    <None Include="wwwroot\js\jquery.min.js" />
+    <None Include="wwwroot\js\responsiveslides.min.js" />
+    <None Include="wwwroot\js\scripts.js" />
+  </ItemGroup>
+
+</Project>

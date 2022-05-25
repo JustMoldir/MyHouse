@@ -1,0 +1,298 @@
+﻿@model UserHouseRole.Models.RentHouse
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<div class=" banner-buying">
+    <div class=" container">
+        <h3><span>Подать объявл</span>ление</h3>
+        <!---->
+        <div class="menu-right">
+            <ul class="menu">
+                <li class="item1">
+                    <a href="#"> Меню<i class="glyphicon glyphicon-menu-down"> </i> </a>
+                    <ul class="cute">
+                        <li class="subitem1"><a asp-controller="SaleHouses" asp-action="Index">Продажа </a></li>
+                        <li class="subitem2"><a asp-controller="RentHouses" asp-action="Index">Аренда </a></li>
+                        <li class="subitem2"><a asp-controller="CreditHouses" asp-action="Index">Жилищный кредит</a></li>
+                        <li class="subitem3"><a asp-controller="SaleHouses" asp-action="Index">Квартиры </a></li>
+                        <li class="subitem3"><a href="dealers.html">Агентство</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="clearfix"> </div>
+        <!--initiate accordion-->
+        <script type="text/javascript">
+            $(function () {
+                var menu_ul = $('.menu > li > ul'),
+                    menu_a = $('.menu > li > a');
+                menu_ul.hide();
+                menu_a.click(function (e) {
+                    e.preventDefault();
+                    if (!$(this).hasClass('active')) {
+                        menu_a.removeClass('active');
+                        menu_ul.filter(':visible').slideUp('normal');
+                        $(this).addClass('active').next().stop(true, true).slideDown('normal');
+                    } else {
+                        $(this).removeClass('active');
+                        $(this).next().stop(true, true).slideUp('normal');
+                    }
+                });
+
+            });
+        </script>
+
+    </div>
+</div>
+
+<div class="contact">
+    <div class="container">
+        <h3>Подать объявление</h3>
+        <div class="contact-top">
+            <div class="col-md-12 contact-top1">
+                <h4>Аренда</h4>
+                <hr />
+                <form enctype="multipart/form-data" asp-controller="RentHouses" asp-action="create"
+                      method="post" class="mt-3">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+                    <div class="form-group row">
+                        <label asp-for="KolKomnat" class="col-sm-2 col-form-label">Количество комнат</label>
+                        <div class="col-sm-4">
+                            <input asp-for="KolKomnat" class="form-control" style="width:100px;">
+                            <span asp-validation-for="KolKomnat" class="text-danger"></span>
+                        </div>
+                        <label asp-for="Sostoyanie" class="col-sm-2 col-form-label">   Состояние</label>
+
+                        <div class="col-sm-4">
+                            <input class="asd" asp-for="Sostoyanie" type="radio" id="contactChoice1"
+                                   value="хорошее">
+                            <label for="contactChoice1">хорошее  </label>
+
+                            <input class="asd" asp-for="Sostoyanie" type="radio" id="contactChoice2"
+                                   value="среднее">
+                            <label for="contactChoice2">среднее  </label>
+
+                            <input class="asd" asp-for="Sostoyanie" type="radio" id="contactChoice3"
+                                   value="требует ремонта ">
+                            <label for="contactChoice3">требует ремонта  </label>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group row">
+                        <label asp-for="Price" class="col-sm-2 col-form-label">Цена</label>
+                        <div class="col-sm-4">
+                            <input asp-for="Price" class="form-control">
+                            <span asp-validation-for="Price" class="text-danger"></span>
+                        </div>
+                        <label asp-for="TipStroenie" class="col-sm-2 col-form-label">Тип строения</label>
+                        <div class="col-sm-4">
+                            <select asp-for="TipStroenie" class="form-control">
+                                <option></option>
+                                <option value="Кирпичный">Кирпичный</option>
+                                <option value="Панельный">Панельный</option>
+                                <option value="Монолитный">Монолитный</option>
+                                <option value="Иное">Иное</option>
+                            </select>
+                            <span asp-validation-for="TipStroenie" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label asp-for="Year" class="col-sm-2 col-form-label">Год постройки (сдачи в эксплуатацию)</label>
+                        <div class="col-sm-4">
+                            <input asp-for="Year" class="form-control">
+                            <span asp-validation-for="Year" class="text-danger"></span>
+                        </div>
+                        <label asp-for="Uchastok" class="col-sm-2 col-form-label">Участок сот.</label>
+                        <div class="col-sm-4">
+                            <input asp-for="Uchastok" class="form-control" style="width:100px;" />
+                            <span asp-validation-for="Uchastok" class="text-danger"></span>
+
+                        </div>
+                    </div>
+
+
+                    <div class="form-group row">
+                        <label asp-for="Floor" class="col-sm-2 col-form-label">Этаж</label>
+                        <div class="col-sm-4">
+                            <input asp-for="Floor" class="form-control">
+                            <span asp-validation-for="Floor" class="text-danger"></span>
+                        </div>
+                        <label asp-for="Internet" class="col-sm-2 col-form-label">Интернет</label>
+                        <div class="col-sm-4">
+                            <input class="asd" asp-for="Internet" type="radio" id="contactChoice1"
+                                   value="ADSL">
+                            <label for="contactChoice1">ADSL  </label>
+
+                            <input class="asd" asp-for="Internet" type="radio" id="contactChoice2"
+                                   value="через TV кабель">
+                            <label for="contactChoice2">через TV кабель  </label>
+
+                            <input class="asd" asp-for="Internet" type="radio" id="contactChoice3"
+                                   value="проводной">
+                            <label for="contactChoice3">проводной</label>
+
+                            <input class="asd" asp-for="Internet" type="radio" id="contactChoice4"
+                                   value="нет">
+                            <label for="contactChoice4">нет</label>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group row">
+                        <label asp-for="Ploshad" class="col-sm-2 col-form-label">Площадь, м² </label>
+                        <div class="col-sm-4">
+                            <input asp-for="Ploshad" class="form-control">
+                            <span asp-validation-for="Ploshad" class="text-danger"></span>
+                        </div>
+                        <label asp-for="Bolkony" class="col-sm-2 col-form-label">Балкон</label>
+                        <div class="col-sm-4">
+                            <input class="asd" asp-for="Bolkony" type="radio" id="contactChoice1"
+                                   value="есть">
+                            <label for="contactChoice1">есть</label>
+
+                            <input class="asd" asp-for="Bolkony" type="radio" id="contactChoice2"
+                                   value="нет">
+                            <label for="contactChoice2">нет</label>
+
+                        </div>
+
+                    </div>
+                    <div class="form-group row">
+                        <label asp-for="City" class="col-sm-2 col-form-label">Город</label>
+                        <div class="col-sm-4">
+                            <input asp-for="City" class="form-control">
+                            <span asp-validation-for="City" class="text-danger"></span>
+                        </div>
+
+
+                        <label asp-for="UserName" class="col-sm-2 col-form-label">Имя продавца</label>
+                        <div class="col-sm-4">
+                            <input asp-for="UserName" class="form-control">
+                            <span asp-validation-for="UserName" class="text-danger"></span>
+
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label asp-for="Street" class="col-sm-2 col-form-label">Улица или микрорайон</label>
+                        <div class="col-sm-4">
+                            <input asp-for="Street" class="form-control">
+                            <span asp-validation-for="Street" class="text-danger"></span>
+                        </div>
+                        <label asp-for="PhoneNumber" class="col-sm-2 col-form-label">Номер телефона</label>
+                        <div class="col-sm-4">
+                            <input asp-for="PhoneNumber" class="form-control">
+                            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label asp-for="TipRent" class="col-sm-2 col-form-label">Период аренды</label>
+                        <div class="col-sm-4">
+                            <select asp-for="TipRent" class="form-control">
+                                <option></option>
+                                <option value="по часам">по часам</option>
+                                <option value="посуточно">посуточно</option>
+                                <option value="на длительный срок">на длительный срок</option>
+                                <option value="Иное">Иное</option>
+                            </select>
+                            <span asp-validation-for="TipRent" class="text-danger"></span>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group row">
+                        <label asp-for="Text" class="col-sm-2 col-form-label">Текст объявления</label>
+                        <div class="col-sm-10">
+                            <p><textarea asp-for="Text" class="form-control" placeholder="Текст" style="height: 200px; "></textarea></p>
+                            <span asp-validation-for="Text" class="text-danger"></span>
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group row">
+                        <div class="col-sm-2">
+                            <label class="col-form-label">Фотографии</label>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="custom-file">
+                                <input asp-for="RImageFile1" class="form-control custom-file-input">
+                                <label class="custom-file-label">Выберите фото</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="custom-file">
+                                <input asp-for="RImageFile2" class="form-control custom-file-input">
+                                <label class="custom-file-label">Выберите фото</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="custom-file">
+                                <input asp-for="RImageFile3" class="form-control custom-file-input">
+                                <label class="custom-file-label">Выберите фото</label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-2">
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="custom-file">
+                                <input asp-for="RImageFile4" class="form-control custom-file-input">
+                                <label class="custom-file-label">Выберите фото</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="custom-file">
+                                <input asp-for="RImageFile5" class="form-control custom-file-input">
+                                <label class="custom-file-label">Выберите фото</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="custom-file">
+                                <input asp-for="RImageFile6" class="form-control custom-file-input">
+                                <label class="custom-file-label">Выберите фото</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-primary" />
+                    </div>
+                </form>
+
+                <div>
+                    <a asp-action="Index">Back to List</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+
+    <script>
+
+        $(document).ready(function () {
+            $('.custom-file-input').on("change", function () {
+                var fileLabel = $(this).next('.custom-file-label');
+                var files = $(this)[0].files;
+                if (files.length == 1) {
+                    fileLabel.html(files[0].name);
+                }
+            });
+        });
+    </script>
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

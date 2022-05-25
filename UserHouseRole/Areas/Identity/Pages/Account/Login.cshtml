@@ -1,0 +1,257 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Войти";
+}
+
+
+
+
+<div class=" banner-buying">
+    <div class=" container">
+        <h3><span>Вой</span>ти</h3>
+        <!---->
+        <div class="menu-right">
+            <ul class="menu">
+                <li class="item1">
+                    <a href="#"> Меню<i class="glyphicon glyphicon-menu-down"> </i> </a>
+                    <ul class="cute">
+                        <li class="subitem1"><a asp-controller="SaleHouses" asp-action="Index">Продажа </a></li>
+                        <li class="subitem2"><a asp-controller="RentHouses" asp-action="Index">Аренда </a></li>
+                        <li class="subitem2"><a asp-controller="CreditHouses" asp-action="Index">Жилищный кредит</a></li>
+                        <li class="subitem3"><a asp-controller="SaleHouses" asp-action="Index">Квартиры </a></li>
+                        <li class="subitem3"><a href="dealers.html">Агентство</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="clearfix"> </div>
+        <!--initiate accordion-->
+        <script type="text/javascript">
+            $(function () {
+                var menu_ul = $('.menu > li > ul'),
+                    menu_a = $('.menu > li > a');
+                menu_ul.hide();
+                menu_a.click(function (e) {
+                    e.preventDefault();
+                    if (!$(this).hasClass('active')) {
+                        menu_a.removeClass('active');
+                        menu_ul.filter(':visible').slideUp('normal');
+                        $(this).addClass('active').next().stop(true, true).slideDown('normal');
+                    } else {
+                        $(this).removeClass('active');
+                        $(this).next().stop(true, true).slideUp('normal');
+                    }
+                });
+
+            });
+        </script>
+
+    </div>
+</div>
+<!--//header-->
+<!--contact-->
+<div class="login-right">
+    <div class="container">
+        <h3>Войти</h3>
+        <div class="login-top">
+            <ul class="login-icons">
+                <li><a href="#"><i class="facebook"> </i><span>Facebook</span></a></li>
+                <li><a href="https://web.facebook.com/login.php?skip_api_login=1&api_key=491060975866888&kid_directed_site=0&app_id=491060975866888&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv8.0%2Fdialog%2Foauth%3Fclient_id%3D491060975866888%26scope%3Demail%26response_type%3Dcode%26redirect_uri%3Dhttps%253A%252F%252Flocalhost%253A44376%252Fsignin-facebook%26state%3DCfDJ8IMmD9Eb1gpAjEmMn6M3BNTTmc-HbIdKlLSbD1hjd9-hTkZ3Js8yHGZMubAnK5MzN8ZfzjtvuRGU3iOeUUXm_dWl-3Vla3_D5vbW184Rn-wy9EBSAEG2Wzu7pCftcZe6c6DZdZLPg0iorGFPh6kumjoJ7qap2M8njfUla89udeQAmey_md67yOiUhSdPFxbtYPUYyGKMCj-HScL-WidcLSk1Ajm321bK8Ez-oihPb246p99nO2fr_n8laOSFh6TFPGU8N37iA3HgO8sDlWXohVHUkL20vyGIuyDJzl_6BMG9%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3Dd56c8e64-5d59-486a-b569-d5ca62369613%26tp%3Dunspecified&cancel_url=https%3A%2F%2Flocalhost%3A44376%2Fsignin-facebook%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3DCfDJ8IMmD9Eb1gpAjEmMn6M3BNTTmc-HbIdKlLSbD1hjd9-hTkZ3Js8yHGZMubAnK5MzN8ZfzjtvuRGU3iOeUUXm_dWl-3Vla3_D5vbW184Rn-wy9EBSAEG2Wzu7pCftcZe6c6DZdZLPg0iorGFPh6kumjoJ7qap2M8njfUla89udeQAmey_md67yOiUhSdPFxbtYPUYyGKMCj-HScL-WidcLSk1Ajm321bK8Ez-oihPb246p99nO2fr_n8laOSFh6TFPGU8N37iA3HgO8sDlWXohVHUkL20vyGIuyDJzl_6BMG9%23_%3D_&display=page&locale=ru_RU&pl_dbl=0&_rdc=1&_rdr" class="twit"><i class="twitter"></i><span>Twitter</span></a></li>
+                <li><a href="https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?response_type=code&client_id=394368540680-o1hvgcp0crd6k8vd9vb4gv9q7asat5bc.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Flocalhost%3A44376%2Fsignin-google&scope=openid%20profile%20email&state=CfDJ8IMmD9Eb1gpAjEmMn6M3BNQtUcSB6ZXZFj0ZMZ6XaKz0ab5bT_8sMK9-CRBqP6mMC1LnPDi-q-FwMu5iqdrVmh96GaxQcmC9V-f9Kc4iUQFkfiJHHQpyVSGCsBK-8JOlippzCo-W8AAQwAzvuzkMhkJ64_6gOO1tRzk3eLwckfsoCk16MgBxp-COljbWV1Al2ZNuXlL36v_EbMewZ0JUkFuGKsskLf9IZkdxLWA39s2P4_nBhCms_gfl-GLz0jcrot0dYhfhIXQL_AskGYKM20S5SXZXZocwz-uKxSs3oUzL&flowName=GeneralOAuthFlow" class="go"><i class="google"></i><span>Google +</span></a></li>
+                <li><a href="#" class="in"><i class="linkedin"></i><span>Linkedin</span></a></li>
+                <div class="clearfix"> </div>
+            </ul>
+            <div class="form-info">
+                <form  id="account" method="post">
+                    <input asp-for="Input.Email" type="text" class="text" placeholder="Ваш логин" required="">
+                    <input asp-for="Input.Password" type="password" placeholder="Ваш пароль" required="">
+                    <label class="hvr-sweep-to-right">
+                        <input type="submit" value="ВОЙТИ">
+
+                    </label>
+                </form>
+            </div>
+            <div class="create">
+                <h4>Зарегистрируйтесь как новый пользователь</h4>
+                <a class="hvr-sweep-to-right" asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Создать аккаунт</a>
+
+
+                <div class="clearfix"> </div>
+            </div>
+
+            <div class="create">
+                <h4>Забыли пароль?</h4>
+                <a class="hvr-sweep-to-right" id="forgot-password" asp-page="./ForgotPassword">Восстановить</a>
+
+                <div class="clearfix"> </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--//contact-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<script src="https://kit.fontawesome.com/0ef045db0f.js" crossorigin="anonymous"></script>
+<body>
+    <div id="div-register" class="center-block" style="width:550px;">
+        <div class="login-block">
+            <img class="image" src="/img/iconuser.png" alt="Scanfcode">
+            <h1>Введите свои данные</h1>
+            <form id="account" method="post">
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user ti-user"></i></span>
+                        <input asp-for="Input.Email" type="text" class="form-control" placeholder="Ваш логин">
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock ti-unlock"></i></span>
+                        <input asp-for="Input.Password" type="password" class="form-control" placeholder="Ваш пароль">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="checkbox">
+                            <label asp-for="Input.RememberMe">
+                                <input asp-for="Input.RememberMe" />
+                                @Html.DisplayNameFor(m => m.Input.RememberMe)
+                            </label>
+                        </div>
+                    </div>
+
+
+                </div>
+                <button class="btn btn-primary btn-block" type="submit">ВОЙТИ НА САЙТ</button>
+                <div class="login-footer">
+                    <h6>или войдите с помощью</h6>
+                    <ul class="social-icons">
+                        <li class="asd"><a class="facebook" href="https://web.facebook.com/login.php?skip_api_login=1&api_key=491060975866888&kid_directed_site=0&app_id=491060975866888&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv8.0%2Fdialog%2Foauth%3Fclient_id%3D491060975866888%26scope%3Demail%26response_type%3Dcode%26redirect_uri%3Dhttps%253A%252F%252Flocalhost%253A44376%252Fsignin-facebook%26state%3DCfDJ8IMmD9Eb1gpAjEmMn6M3BNTTmc-HbIdKlLSbD1hjd9-hTkZ3Js8yHGZMubAnK5MzN8ZfzjtvuRGU3iOeUUXm_dWl-3Vla3_D5vbW184Rn-wy9EBSAEG2Wzu7pCftcZe6c6DZdZLPg0iorGFPh6kumjoJ7qap2M8njfUla89udeQAmey_md67yOiUhSdPFxbtYPUYyGKMCj-HScL-WidcLSk1Ajm321bK8Ez-oihPb246p99nO2fr_n8laOSFh6TFPGU8N37iA3HgO8sDlWXohVHUkL20vyGIuyDJzl_6BMG9%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3Dd56c8e64-5d59-486a-b569-d5ca62369613%26tp%3Dunspecified&cancel_url=https%3A%2F%2Flocalhost%3A44376%2Fsignin-facebook%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3DCfDJ8IMmD9Eb1gpAjEmMn6M3BNTTmc-HbIdKlLSbD1hjd9-hTkZ3Js8yHGZMubAnK5MzN8ZfzjtvuRGU3iOeUUXm_dWl-3Vla3_D5vbW184Rn-wy9EBSAEG2Wzu7pCftcZe6c6DZdZLPg0iorGFPh6kumjoJ7qap2M8njfUla89udeQAmey_md67yOiUhSdPFxbtYPUYyGKMCj-HScL-WidcLSk1Ajm321bK8Ez-oihPb246p99nO2fr_n8laOSFh6TFPGU8N37iA3HgO8sDlWXohVHUkL20vyGIuyDJzl_6BMG9%23_%3D_&display=page&locale=ru_RU&pl_dbl=0&_rdc=1&_rdr"><i class="fa fa-facebook"></i></a></li>
+                        <li class="asd"><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li class="asd"><a class="linkedin" href="https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?response_type=code&client_id=394368540680-o1hvgcp0crd6k8vd9vb4gv9q7asat5bc.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Flocalhost%3A44376%2Fsignin-google&scope=openid%20profile%20email&state=CfDJ8IMmD9Eb1gpAjEmMn6M3BNQtUcSB6ZXZFj0ZMZ6XaKz0ab5bT_8sMK9-CRBqP6mMC1LnPDi-q-FwMu5iqdrVmh96GaxQcmC9V-f9Kc4iUQFkfiJHHQpyVSGCsBK-8JOlippzCo-W8AAQwAzvuzkMhkJ64_6gOO1tRzk3eLwckfsoCk16MgBxp-COljbWV1Al2ZNuXlL36v_EbMewZ0JUkFuGKsskLf9IZkdxLWA39s2P4_nBhCms_gfl-GLz0jcrot0dYhfhIXQL_AskGYKM20S5SXZXZocwz-uKxSs3oUzL&flowName=GeneralOAuthFlow"><i class="fa fa-google"></i></a></li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+        <div class="login-links">
+            <p class="text-center"><a id="forgot-password" asp-page="./ForgotPassword">Забыли пароль?</a></p>
+            <p class="text-center">Еще нет аккаунта? <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Зарегистрируйтесь как новый пользователь</a></p>
+        </div>
+
+
+    </div>
+
+</body>
+
+<style>
+    .login-block {
+        background-color: #fff;
+        padding: 60px;
+        -webkit-box-shadow: 0 3px 50px 0 rgba(0,0,0,.1);
+        box-shadow: 0 3px 50px 0 rgba(0,0,0,.1);
+        text-align: center;
+        border-radius: 15px
+    }
+
+    .image {
+        height: 100px;
+        font-weight: 100;
+        margin: auto;
+    }
+
+    .center-block {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    #account input[type="text"], #account input[type="password"] {
+        border: 0;
+        background: none;
+        display: inline-block;
+        border: none;
+        float: right;
+        width: 30%;
+        border-bottom: 2px solid #6856eb;
+        outline: none;
+        transition: 0.25s;
+    }
+
+        #account input[type="text"]:focus, #account input[type="password"]:focus {
+            width: 250px;
+        }
+
+    .login-block h1, .login-block h6 {
+        font-family: Open Sans,sans-serif;
+        color: #96a2b2;
+        letter-spacing: 1px
+    }
+
+    .login-block h1 {
+        font-size: 22px;
+        margin-bottom: 60px;
+        margin-top: 20px
+    }
+
+    .login-block .input-group-addon {
+        color: #3b5998;
+        font-size: 19px;
+        opacity: .5;
+        padding: 10px;
+        margin-bottom: 5px
+    }
+
+    .login-block .btn-block {
+        margin-top: 30px;
+        padding: 15px;
+        background: #6856eb;
+        border-color: #6856eb;
+    }
+
+    .social-icons a:active, .social-icons a:focus, .social-icons a:hover {
+        color: #fff;
+        background-color: #29aafe
+    }
+
+    .social-icons.size-sm a {
+        line-height: 34px;
+        height: 34px;
+        width: 34px;
+        font-size: 14px
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .asd {
+        display: inline;
+        padding: 14px 16px;
+    }*@
+
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

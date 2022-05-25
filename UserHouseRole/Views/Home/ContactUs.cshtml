@@ -1,0 +1,30 @@
+﻿@model SendMailDto
+@{
+    ViewData["Title"] = "ContactUs";
+}
+
+<h1>@ViewBag.Message</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="@Model.Name"></label>
+        <input type="text" asp-for="@Model.Name" class="form-control" placeholder="Enter your Name" />
+        <span class="text-danger" asp-validation-for="@Model.Name"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Number"></label>
+        <input type="text" asp-for="@Model.Number" class="form-control" placeholder="Enter your phonr number" />
+        <span class="text-danger" asp-validation-for="@Model.Number"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Email"></label>
+        <input type="text" asp-for="@Model.Email" class="form-control" placeholder="Enter your email" />
+        <span class="text-danger" asp-validation-for="@Model.Email"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Message"></label>
+        <input type="text" asp-for="@Model.Message" class="form-control" placeholder="Enter your message" />
+        <span class="text-danger" asp-validation-for="@Model.Message"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Send Mail</button>
+</form>

@@ -1,0 +1,332 @@
+﻿
+<div class=" banner-buying">
+    <div class=" container">
+        <h3><span>О на</span>с</h3>
+        <!---->
+        <div class="menu-right">
+            <ul class="menu">
+                <li class="item1">
+                    <a href="#"> Меню<i class="glyphicon glyphicon-menu-down"> </i> </a>
+                    <ul class="cute">
+                        <li class="subitem1"><a asp-controller="SaleHouses" asp-action="Index" >Продажа </a></li>
+                        <li class="subitem2"><a asp-controller="RentHouses" asp-action="Index" >Аренда </a></li>
+                        <li class="subitem2"><a asp-controller="CreditHouses" asp-action="Index">Жилищный кредит</a></li>
+                        <li class="subitem3"><a asp-controller="SaleHouses" asp-action="Index">Квартиры </a></li>
+                        <li class="subitem3"><a href="dealers.html">Агентство</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="clearfix"> </div>
+        <!--initiate accordion-->
+        <script type="text/javascript">
+			$(function() {
+			    var menu_ul = $('.menu > li > ul'),
+			           menu_a  = $('.menu > li > a');
+			    menu_ul.hide();
+			    menu_a.click(function(e) {
+			        e.preventDefault();
+			        if(!$(this).hasClass('active')) {
+			            menu_a.removeClass('active');
+			            menu_ul.filter(':visible').slideUp('normal');
+			            $(this).addClass('active').next().stop(true,true).slideDown('normal');
+			        } else {
+			            $(this).removeClass('active');
+			            $(this).next().stop(true,true).slideUp('normal');
+			        }
+			    });
+
+			});
+        </script>
+
+    </div>
+</div>
+<!--//header-->
+<div class="about">
+    <div class="about-head">
+        <div class="container">
+            <h3>О нас</h3>
+            <div class="about-in">
+                <a href="blog_single.html"><img src="~/images/kot2.jpg" alt="image" class="img-responsive ">	</a>
+                <h6><a href="#">MyHouse.kz – это постоянный доступ к актуальной базе объявлений о продаже, покупке, аренде квартир, домов</a></h6>
+                <p>
+                    Каждый человек хотя бы раз в своей жизни неминуемо сталкивается с операциями на рынке недвижимости. И неудивительно, ведь все мы живём на собственной либо арендованной жилплощади, работаем в помещениях, которые являются объектами недвижимости.
+
+                    Практически каждый из нас мечтает о приобретении большой красивой квартиры или дома, и многим эту мечту удаётся реализовать. Кроме того, есть немало людей, для которых операции с недвижимым имуществом – это их бизнес или работа.
+
+                    Именно потому, что недвижимость – это неотъемлемая часть нашей жизни, сайт MyHouse.kz, в деятельности которого на равных правах принимают участие все участники рынка, очень популярен в Казахстане уже много лет. Кем бы вы ни были: брокером, владельцем крупной риэлторской компании, покупателем, продавцом, арендатором или арендодателем – наш сайт будет очень полезным для вас.
+                </p>
+            </div>
+        </div>
+    </div>    <div class="services">
+        <div class="container">
+            <div class="service-top">
+                <h3>Услуги</h3>
+                <p>В проекте расмотрено 4 услуги</p>
+            </div>
+            <div class="services-grid">
+                <div class="col-md-6 service-top1">
+                    <div class=" ser-grid">
+                        <a asp-controller="WrentHouses" asp-action="Contact" class="hi-icon hi-icon-archive glyphicon glyphicon-user"> </a>
+                    </div>
+                    <div class="ser-top">
+                        <h4>Сотрудничество</h4>
+                        <p>
+                            Сотрудничество с сайтом. Если вы предприниматель и хотите дать свою недвижимость в ипотеку или в кредит, то вы можете оставить заявку на сотрудничество
+                        </p>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="col-md-6 service-top1">
+                    <div class=" ser-grid">
+                        <a href="#" class="hi-icon hi-icon-archive glyphicon glyphicon-leaf"> </a>
+                    </div>
+                    <div class="ser-top">
+                        <h4>Купить продать</h4>
+                        <p>
+                            Каждый человек на сайте может публиковать свой дом на сайте, либо искать и купить. Эти услуги на сайте абсолютно бесплатно
+                        </p>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="services-grid">
+                <div class="col-md-6 service-top1">
+                    <div class=" ser-grid">
+                        <a asp-controller="WrentHouses" asp-action="Contact" class="hi-icon hi-icon-archive glyphicon glyphicon-cog"> </a>
+                    </div>
+                    <div class="ser-top">
+                        <h4>Оставить отзыв</h4>
+                        <p>
+                            Пользователи сможет оставить отзыв либо предложение для сайта. Каждый отзыв и предложение для нас очень важно и играет большую роль для продвежение сайта
+                        </p>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="col-md-6 service-top1">
+                    <div class=" ser-grid">
+                        <a asp-controller="WrentHouses" asp-action="Contact" class="hi-icon hi-icon-archive glyphicon glyphicon-file"> </a>
+                    </div>
+                    <div class="ser-top">
+                        <h4>Подать заявку на кредит</h4>
+                        <p>
+                            Также у клиентов есть возможность подать заявку на кредит, ипотеку. Это большая возможность для тех кому удобно
+                        </p>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="content-bottom">
+        <div class="container">
+            <h3>Отзывы</h3>
+            <div class="col-md-6 name-in">
+                <div class=" bottom-in">
+                    <p class="para-in">
+                        Искала квартиру для командировке, в другом городе. Зашла на "MyHouse.kz" и все... Заходите, хороший сайт... Можно подобрать по вкусу, цене и всем вашим запросам хорошее жилье...
+                    </p>
+                    <i class="dolor"> </i>
+                    <div class="men-grid">
+                        <a href="#" class="men-top"><img class="img-responsive men-top" src="~/images/te.jpg" alt=""></a>
+                        <div class="men">
+                            <span>Максим Анатольевич</span>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+                <div class=" bottom-in">
+                    <p class="para-in">
+                        Сайт информативен, но часто по обьявлением не понятно это суточная аренда или же цена выставлена за месяц
+                    </p>
+                    <i class="dolor"> </i>
+                    <div class="men-grid">
+                        <a href="#" class="men-top"><img class="img-responsive " src="~/images/te2.jpg" alt=""></a>
+                        <div class="men">
+                            <span>Марлен Аскарович</span>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6  name-on">
+                <div class="bottom-in ">
+                    <p class="para-in">
+                        Большой выбор квартир (апартаментов) как от хояев, так и от агентств. Удобные фильтры для отбора. Всем советую
+                    </p>
+                    <i class="dolor"> </i>
+                    <div class="men-grid">
+                        <a href="#" class="men-top"><img class="img-responsive " src="~/images/te1.jpg" alt=""></a>
+                        <div class="men">
+                            <span>Жанбота Омашева</span>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <!--//test-->
+    <!--partners-->
+    <div class="content-bottom1">
+        <h3>Наши партнеры</h3>
+        <div class="container">
+            <ul>
+                <li><a href="#"><img class="img-responsive" src="~/images/lg.png" alt=""></a></li>
+                <li><a href="#"><img class="img-responsive" src="~/images/lg1.png" alt=""></a></li>
+                <li><a href="#"><img class="img-responsive" src="~/images/lg2.png" alt=""></a></li>
+                <li><a href="#"><img class="img-responsive" src="~/images/lg3.png" alt=""></a></li>
+                <li><a href="#"><img class="img-responsive" src="~/images/agent6.png" alt=""></a></li>
+                <div class="clearfix"> </div>
+            </ul>
+            <ul>
+                <li><a href="#"><img class="img-responsive" src="~/images/agent1.png" alt="" style="height: 40px; width:100px"></a></li>
+                <li><a href="#"><img class="img-responsive" src="~/images/agent2.png" alt="" style="height: 40px; width:100px"></a></li>
+                <li><a href="#"><img class="img-responsive" src="~/images/agent3.png" alt="" style="height: 40px; width:100px"></a></li>
+                <li><a href="#"><img class="img-responsive" src="~/images/agent7.png" alt="" style="height: 40px; width:100px"></a></li>
+                <li><a href="#"><img class="img-responsive" src="~/images/agent5.png" alt=""></a></li>
+                <div class="clearfix"> </div>
+            </ul>
+        </div>
+    </div>
+    <!---->
+    <!---->
+    <div class="choose-us">
+        <div class="container">
+            <h3>why choose us</h3>
+            <div class="us-choose">
+                <div class="col-md-6 why-choose">
+                    <div class="  ser-grid ">
+                        <i class="hi-icon hi-icon-archive glyphicon glyphicon-pencil"> </i>
+                    </div>
+                    <div class="ser-top beautiful">
+                        <h5>beautiful &amp; enjoyable designs</h5>
+                        <label>The standard chunk of Lorem</label>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="col-md-6 why-choose">
+                    <div class=" ser-grid">
+                        <i class="hi-icon hi-icon-archive glyphicon glyphicon-time"> </i>
+                    </div>
+                    <div class="ser-top beautiful">
+                        <h5>beautiful &amp; enjoyable designs</h5>
+                        <label>The standard chunk of Lorem</label>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="us-choose">
+                <div class="col-md-6 why-choose">
+                    <div class=" ser-grid">
+                        <i class="hi-icon hi-icon-archive glyphicon glyphicon-cog"> </i>
+                    </div>
+                    <div class="ser-top beautiful">
+                        <h5>beautiful &amp; enjoyable designs</h5>
+                        <label>The standard chunk of Lorem</label>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="col-md-6 why-choose">
+                    <div class=" ser-grid">
+                        <i class="hi-icon hi-icon-archive glyphicon glyphicon-file"> </i>
+                    </div>
+                    <div class="ser-top beautiful">
+                        <h5>beautiful &amp; enjoyable designs</h5>
+                        <label>The standard chunk of Lorem</label>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+
+        </div>
+    </div>
+    <!---->
+    <!---->
+    <div class="about-bottom">
+        <div class="container">
+            <div class="col-md-6 bottom-about">
+                <h4><a href="blog_single.html">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</a></h4>
+                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
+                <a href="blog_single.html" class="hvr-sweep-to-right more">Read More</a>
+            </div>
+            <div class="col-md-6 bottom-about1">
+                <iframe src="https://player.vimeo.com/video/12690053" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <!---->
+    <div class="container">
+        <div class="content-events">
+            <h3> Events & News</h3>
+            <div class="news">
+                <div class="col-md-4 new-more">
+                    <div class="event">
+                        <h4>26/06/2015</h4>
+                        <h6><a href="blog_single.html">Sed ut perspiciatis unde omnis </a></h6>
+                    </div>
+                    <p>Kasertas lertyasea deeraeser miasera lertasa ritise doloert ferdas caplicabo nerafaes asety u lasec vaserat. nikertyade asetkertyptaiades goertayse.nikertyade asetkertyptaiades goertayse</p>
+                    <a class="hvr-sweep-to-right more" href="blog_single.html">Read More</a>
+                </div>
+                <div class="col-md-4 new-more">
+                    <div class="event">
+                        <h4>26/06/2015</h4>
+                        <h6><a href="blog_single.html">Sed ut perspiciatis unde omnis </a></h6>
+                    </div>
+                    <p>Kasertas lertyasea deeraeser miasera lertasa ritise doloert ferdas caplicabo nerafaes asety u lasec vaserat. nikertyade asetkertyptaiades goertayse.nikertyade asetkertyptaiades goertayse</p>
+                    <a class="hvr-sweep-to-right more" href="blog_single.html">Read More</a>
+                </div>
+                <div class="col-md-4 new-more">
+                    <div class="event">
+                        <h4>26/06/2015</h4>
+                        <h6><a href="blog_single.html">Sed ut perspiciatis unde omnis </a></h6>
+                    </div>
+                    <p>Kasertas lertyasea deeraeser miasera lertasa ritise doloert ferdas caplicabo nerafaes asety u lasec vaserat. nikertyade asetkertyptaiades goertayse.nikertyade asetkertyptaiades goertayse</p>
+                    <a class="hvr-sweep-to-right more" href="blog_single.html">Read More</a>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="news">
+                <div class="col-md-4 new-more">
+                    <div class="event">
+                        <h4>26/06/2015</h4>
+                        <h6><a href="blog_single.html">Sed ut perspiciatis unde omnis </a></h6>
+                    </div>
+                    <p>Kasertas lertyasea deeraeser miasera lertasa ritise doloert ferdas caplicabo nerafaes asety u lasec vaserat. nikertyade asetkertyptaiades goertayse.nikertyade asetkertyptaiades goertayse</p>
+                    <a class="hvr-sweep-to-right more" href="blog_single.html">Read More</a>
+                </div>
+                <div class="col-md-4 new-more">
+                    <div class="event">
+                        <h4>26/06/2015</h4>
+                        <h6><a href="blog_single.html">Sed ut perspiciatis unde omnis </a></h6>
+                    </div>
+                    <p>Kasertas lertyasea deeraeser miasera lertasa ritise doloert ferdas caplicabo nerafaes asety u lasec vaserat. nikertyade asetkertyptaiades goertayse.nikertyade asetkertyptaiades goertayse</p>
+                    <a class="hvr-sweep-to-right more" href="blog_single.html">Read More</a>
+                </div>
+                <div class="col-md-4 new-more">
+                    <div class="event">
+                        <h4>26/06/2015</h4>
+                        <h6><a href="blog_single.html">Sed ut perspiciatis unde omnis </a></h6>
+                    </div>
+                    <p>Kasertas lertyasea deeraeser miasera lertasa ritise doloert ferdas caplicabo nerafaes asety u lasec vaserat. nikertyade asetkertyptaiades goertayse.nikertyade asetkertyptaiades goertayse</p>
+                    <a class="hvr-sweep-to-right more" href="blog_single.html">Read More</a>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+
+</div>
