@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  userhouserole:
+    image: ${DOCKER_REGISTRY-}userhouserole
+    build:
+      context: .
+      dockerfile: UserHouseRole\Dockerfile
